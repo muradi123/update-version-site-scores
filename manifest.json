@@ -1,7 +1,7 @@
 {
-    "name": "chekbox",
-    "description" : "choose chekbox",
-    "version": "1.1",
+    "name": "site-scores",
+    "description" : "you can choose any site scores",
+    "version": "1.2",
     "icons":{
         "100":"./images/off-button-100.png",
         "64":"./images/off-button-64.png",
