@@ -80,6 +80,7 @@ chrome.runtime.onMessage.addListener(
 
           console.log('true')
           document.body.innerHTML += succsesHtml;
+          $('.sucsses-main-qrt').nextAll('div').remove();
           if(result.scores===result.previous){
             console.log('same')
             $('.range').text('No change');
@@ -170,6 +171,7 @@ chrome.runtime.onMessage.addListener(
             })
             .then(res=>{
               document.body.innerHTML += succsesHtml;
+              $('.sucsses-main-qrt').nextAll('div').remove();
               
             })
             .catch(error=>{
