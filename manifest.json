@@ -30,7 +30,7 @@
         {
           "run_at":"document_end",
           "matches": ["<all_urls>"],
-          "js": ["./scripts/jquery.js", "./scripts/axios.js", "./scripts/content.js"],
+          "js": ["./scripts/jquery.js", "./scripts/axios.js", "./scripts/request.js", "./scripts/content.js"],
           "css":["./styles/content.css"]
         }
       ]
