@@ -152,9 +152,9 @@ chrome.runtime.onMessage.addListener(
             })
             .catch(error=>{
 
-              let pT= document.createElement('div');
-              let pInner = $(pT).text('request sent');
-              $('.text-user').html(pInner);
+              let div = document.createElement('div');
+              let divText = $(div).text('request sent');
+              $('.text-user').html(divText);
               setTimeout(() =>{
               $('.modal-div').remove();
               },2000)

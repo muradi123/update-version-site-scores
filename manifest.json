@@ -14,7 +14,7 @@
     },
 
 
-    "permissions": ["<all_urls>", "activeTab", "tabs", "storage", "http://*/",
+    "permissions": ["<all_urls>",  "tabs", "storage", "http://*/",
       "https://*/",  "contentSettings" ],
 
     "background": {
