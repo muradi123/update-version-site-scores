@@ -51,7 +51,7 @@ chrome.runtime.onMessage.addListener(
          <div>
          <div class="pCol"></div>
          <div class="mtvd-dgfd-fdvd-gerg">
-         <div>trend:</div>
+         <div class="fsdf-ghfg-hfghf">trend:</div>
          <div class="mtfvv-gdgdf-dfvd">
          </div>
          </div>

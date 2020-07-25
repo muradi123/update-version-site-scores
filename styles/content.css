@@ -168,6 +168,8 @@ align-items: center;
 }
 .pCol{
     font-weight: bold;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif ;
 }
 
 .mtvd-dgfd-fdvd-gerg{
@@ -199,4 +201,9 @@ flex-direction: row;;
 
 .dasdsh-fghf-ccv{
     display: block;
+}
+
+.fsdf-ghfg-hfghf{
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif ;
 }
