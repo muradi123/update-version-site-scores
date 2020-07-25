@@ -1,5 +1,3 @@
-
-
 let cleaned_host = location.host;
 
 if(location.host.indexOf('www.') === 0){
@@ -205,5 +203,3 @@ chrome.runtime.onMessage.addListener(
     
   }
 })
-
-
