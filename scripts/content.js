@@ -2,6 +2,25 @@
     chrome.runtime.onMessage.addListener(
       function({browserMessage, getdom }, sender, sendResponse) {
         if (browserMessage === "tabCliked"){ 
+          let hostName = window.location.hostname;
+          if(location.host.indexOf('www.') === 0){
+            hostName = location.host.replace('www.','');
+          }
+          else if(location.host.indexOf('web.') === 0){
+            hostName = location.host.replace('web.','');
+          }
+          else if(location.host.indexOf('docs.') === 0){
+            hostName = location.host.replace('docs.','');
+          }
+          else if(location.host.indexOf('m.') === 0){
+            hostName = location.host.replace('m.','');
+          }
+          else if(location.host.indexOf('ru.') === 0){
+            hostName = location.host.replace('ru.','');
+          }
+         
+console.log(hostName)
+
           chrome.storage.local.get(['sta', 'scores', 'previous','dmne'], function(result) {
           if(result.scores && result.sta === 200){
             let succsesHtml = `
@@ -18,7 +37,7 @@
              </div>
              <div class="mtfd-dvfg-dfbtn-bgfb"></div>
              <div>
-             <div class="mtv-fgdgb-y65-gh4">${result.dmne}</div>
+             <div class="mtv-fgdgb-y65-gh4">${hostName}</div>
              </div>
              <div class="mtcs-fsvsv-bfdgbfg">
              <canvas id="mtsdsf-bfvdf-4534bg-dfbf"></canvas>
@@ -129,7 +148,7 @@
                </div>
                <div class="effvd-42dfdvd-3dss-vdbd"></div>
                <div class="fvxvdf-gdfa-bgdbfv-asdsd">
-               Sorry, we haven't reviewed ${result.dmne} yet.<br/>
+               Sorry, we haven't reviewed ${hostName} yet.<br/>
                <div class="fcsdf-dffv-34rdf-43trf"></div>
                If you would like us to add it to the queue for our legal experts to review, hit the "Request" button now.
                </div>
@@ -158,7 +177,10 @@
            });
          
            $('#fsfd-bbrdfb4-g45t-45t3-34gf').click(function(){
-              
+            chrome.runtime.sendMessage({message: "domain"});
+         
+
+
            $(this).remove();
            axios({
              method:'get',
